@@ -1,0 +1,50 @@
+@import "colors";
+
+body{
+  margin: 0;
+  padding: 0;
+}
+nav ul a{
+  color: $color-principal;
+}
+.nav-wrapper{
+  background-color: transparent;
+}
+.header{
+  background-color: $color-base;
+  color: $color-principal;
+}
+.nav{
+  top: 0;
+  // background-color: $color-base;
+  &__logo{
+    margin-top: 60px;
+  }
+  &__menu{
+    background-color: $color-principal;
+    width: 100%;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    a{
+      margin: 0 20px;
+      font-size: 1.2rem;
+      letter-spacing: 1.6;
+      color: $color-base;
+    }
+  }
+}
+
+
+.seccion1{
+  color: $color-base;
+  position: relative;
+  &__texto{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+}
