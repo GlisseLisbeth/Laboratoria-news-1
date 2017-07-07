@@ -82,6 +82,12 @@ const Noticias = (data) =>{
   const noticia2 = $('<div class="col s6 seccion2"><img class="responsive-img" src="assets/img/'+data[1].img+'"/></div>');
   const textNoticia2 = $('<div class="seccion2__texto col s10"><h5>'+data[1].title+'</h5></div>')
   const noticia3  = $('<div class="col s3"><img class="responsive-img" src="assets/img/'+data[3].img+'"></img></div>');
+  const textNoticia3 = $('<div></div>');
+
+  const divNoticias = (img, noticia) =>{
+    const noticia2 = $('<div class="col s6 seccion2"><img class="responsive-img" src="assets/img/'+data[1].img+'"/></div>');
+    const textNoticia2 = $('<div class="seccion2__texto col s10"><h5>'+data[1].title+'</h5></div>')
+  }
 
   noticia1.append(textNoticia1);
   noticia2.append(textNoticia2);
