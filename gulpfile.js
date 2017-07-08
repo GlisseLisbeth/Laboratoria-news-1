@@ -57,7 +57,7 @@ gulp.task('sass', ()=>{
 });
 
 gulp.task('js', ()=>{
-	gulp.src([config.source+sources.utils+"get-json.js",config.source+sources.components+"header.js",config.source+sources.components+"noticias.js",config.source+sources.components+"mundo.js",config.source+sources.components+"noticia1.js", config.source+sources.js])
+	gulp.src([config.source+sources.utils+"get-json.js",config.source+sources.components+"noticias.js",config.source+sources.components+"mundo.js",config.source+sources.components+"noticia1.js",config.source+sources.utils+"tecnologia.js.js", config.source+sources.js])
 	.pipe(concat('app.js'))
 	.pipe(browserify())
 	.pipe(gulp.dest(config.dist+paths.assets+"js"))

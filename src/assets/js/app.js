@@ -3,8 +3,7 @@
 const render = (root,data) => {
   root.empty();
   const wrapper = $('<div class="wrapper container"></div>');
-  wrapper.append(Header());
-  
+
   if (state.noticiaSelected != null) {
     wrapper.append(NoticiaPrincipal());
   } else{
@@ -32,4 +31,7 @@ $( _ => {
     console.log(json);
   });
   $(".button-collapse").sideNav();
+  $('.footer__btn-up').on('click',()=>{
+    document.body.scrollTop = 0;
+  })
 });

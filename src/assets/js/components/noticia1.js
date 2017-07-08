@@ -9,18 +9,18 @@ const NoticiaPrincipal = () =>{
   const line2 = $('<hr class= "line-title">');
   const textoNoticia = $('<div class="col s9"></div>');
 
-  const autor = $('<div class="col s12"><div class="col s2"><img class="responsive-img" src="assets/img/'+state.noticiaSelected.author.picture+'"/></div></div>')
-  const infoAutor = $('<div class="col s3"><p>'+state.noticiaSelected.author.name+'</p>'+
+  const autor = $('<div class="col s12"><div class="col s2 "><img class="responsive-img img-autor" src="assets/img/'+state.noticiaSelected.author.picture+'"/></div></div>')
+  const infoAutor = $('<div class="col s5"><p>'+state.noticiaSelected.author.name+'</p>'+
                       '<p>'+state.noticiaSelected.author.user+'</p></div>');
   const infoNoticia = $('<div class="col s12"><p>'+state.noticiaSelected.body+'</p></div>')
 
   const articulosNoticia = $('<div class="col s3"></div>');
 
-  const notasNoticia = $('<div class="col s12"><div class="col s12"><h6 class="text-notas">NOTAS RELACIONADAS</h6></div></div>');
+  const notasNoticia = $('<div class="col s12"><div class="col s12"><h6 class="text-notas">NOTAS RELACIONADAS</h6><hr class="hr-title"/></div></div>');
   const imgNoticia1 = $('<div class="col s6"><img class="responsive-img" src="assets/img/foto-n3.png"/><p class="text-notas-min">Laboratoria2017</p></div>');
   const imgNoticia2 = $('<div class="col s6"><img class="responsive-img" src="assets/img/foto-n4.png"/><p class="text-notas-min">Laboratoria2017</p></div>');
 
-  const popularNoticia = $('<div class="col s12"><div class="col s12"><h6 class="text-notas">MÁS POPULARES</h6><div></div>');
+  const popularNoticia = $('<div class="col s12"><div class="col s12"><h6 class="text-notas">MÁS POPULARES</h6><hr class="hr-title"/><div></div>');
   const imgPopular1  = $('<div class="col s12"><img class="responsive-img col s6" src="assets/img/foto-n5.png"/><p class="col s6 text-notas-min">Laboratoria2017</p></div>');
   const imgPopular2  = $('<div class="col s12"><img class="responsive-img col s6" src="assets/img/foto-n6.png"/><p class="col s6 text-notas-min">Laboratoria2017</p></div>');
   const imgPopular3  = $('<div class="col s12"><img class="responsive-img col s6" src="assets/img/foto-n7.png"/><p class="col s6 text-notas-min">Laboratoria2017</p></div>');

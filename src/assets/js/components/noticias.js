@@ -1,8 +1,8 @@
 const Noticias = (update,data) =>{
 
   const containerRow = $('<div class="row"></div>');
-  const noticia1 = $('<div class="col s12 noticia1"></div>');
-  const textNoticia1 = $('<div><img class="responsive-img" src="assets/img/'+data[0].img+'"/><div class="noticia1__texto col s10"><h4>'+data[0].title+'</h4><h6>'+data[0].brief+'</h6></div></div>');
+  const noticia1 = $('<div class="col s12 noticia1-click"></div>');
+  const textNoticia1 = $('<div><img class="responsive-img" src="assets/img/'+data[0].img+'"/><div class="noticia1-click__texto col s10"><h4>'+data[0].title+'</h4><h6>'+data[0].brief+'</h6></div></div>');
   const noticia2 = $('<div class="col s12 m6 noticia2"></div>');
   const textNoticia2 = $('<div class="noticia2__bg"><img class="responsive-img" src="assets/img/'+data[1].img+'"/><div class="noticia2__texto"><h5>'+data[1].title+'</h5></div></div>')
   const noticia3 = $('<div class="col s12 m3 noticia3"></div>');
@@ -15,7 +15,6 @@ const Noticias = (update,data) =>{
     state.noticiaSelected = data[0];
     update();
   })
-
 
   noticia1.append(textNoticia1);
   noticia2.append(textNoticia2);

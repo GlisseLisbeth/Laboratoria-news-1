@@ -35,6 +35,9 @@ h5{
 .line-title{
 
 }
+%footer-pd{
+  padding: 10px;
+}
 .nav{
   margin: 0 auto;
   top: 0;
@@ -106,7 +109,7 @@ h5{
   }
 }
 
-.noticia1{
+.noticia1-click{
   cursor: pointer;
   color: $color-base;
   position: relative;
@@ -124,10 +127,42 @@ h5{
   @extend .noticia2__bg;
 }
 
+.img-autor{
+  border-radius: 50%;
+  border: 1px solid $color-principal;
+  padding: 5px;
+}
+
 .footer{
   background-color: $color-principal;
   color: $color-base;
   position: relative;
   top: 140px;
-  padding: 10px;
+  padding: 15px 40px;
+  &__text{
+    border-right: 1px solid $color-base;
+    border-left: 1px solid $color-base;
+    &--mg{
+      margin-bottom: 0;
+    }
+  }
+  &__terminos{
+    &--mtb{
+      margin: 0;
+    }
+    &--mb{
+      margin-bottom: 0;
+    }
+  }
+  &__btn-up{
+    border: 0;
+    width: 70px;
+    height: 70px;
+    background-color: $color-secundario;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: inline-block;
+  }
 }
