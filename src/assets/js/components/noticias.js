@@ -1,26 +1,32 @@
-const Noticias = (data) =>{
-  const container = $('<div class="container"></div>');
-  const containerRow = $('<div class="row"></div>');
-  const noticia1 = $('<div class="col s12 seccion1"><img class="responsive-img" src="assets/img/'+data[0].img+'"/></div>');
-  const textNoticia1 = $('<div class="seccion1__texto col s10"><h4>'+data[0].title+'</h4><h6>'+data[0].brief+'</h6></div>');
-  const noticia2 = $('<div class="col s6 seccion2"><img class="responsive-img" src="assets/img/'+data[1].img+'"/></div>');
-  const textNoticia2 = $('<div class="seccion2__texto col s10"><h5>'+data[1].title+'</h5></div>')
-  const noticia3  = $('<div class="col s3"><img class="responsive-img" src="assets/img/'+data[3].img+'"></img></div>');
-  const textNoticia3 = $('<div></div>');
+const Noticias = (update,data) =>{
 
-  const divNoticias = (img, noticia) =>{
-    const noticia2 = $('<div class="col s6 seccion2"><img class="responsive-img" src="assets/img/'+data[1].img+'"/></div>');
-    const textNoticia2 = $('<div class="seccion2__texto col s10"><h5>'+data[1].title+'</h5></div>')
-  }
+  const containerRow = $('<div class="row"></div>');
+  const noticia1 = $('<div class="col s12 noticia1"></div>');
+  const textNoticia1 = $('<div><img class="responsive-img" src="assets/img/'+data[0].img+'"/><div class="noticia1__texto col s10"><h4>'+data[0].title+'</h4><h6>'+data[0].brief+'</h6></div></div>');
+  const noticia2 = $('<div class="col s12 m6 noticia2"></div>');
+  const textNoticia2 = $('<div class="noticia2__bg"><img class="responsive-img" src="assets/img/'+data[1].img+'"/><div class="noticia2__texto"><h5>'+data[1].title+'</h5></div></div>')
+  const noticia3 = $('<div class="col s12 m3 noticia3"></div>');
+  const textNoticia3 = $('<div class="noticia3__bg"><img class="responsive-img col s6 m12" src="assets/img/'+data[2].img+'"/><div class="noticia3__texto col s6 m12"><h5>'+data[2].title+'</h5></div></div>')
+  const noticia4 = $('<div class="col s12 m3 noticia4"></div>');
+  const textNoticia4 = $('<div class="noticia4__bg"><img class="responsive-img col s6 m12" src="assets/img/'+data[3].img+'"/><div class="noticia4__texto col s6 m12"><h5>'+data[3].title+'</h5></div></div>')
+
+
+  noticia1.on('click', ()=>{
+    state.noticiaSelected = data[0];
+    update();
+  })
+
 
   noticia1.append(textNoticia1);
   noticia2.append(textNoticia2);
-
+  noticia3.append(textNoticia3);
+  noticia4.append(textNoticia4);
 
   containerRow.append(noticia1);
   containerRow.append(noticia2);
   containerRow.append(noticia3);
+  containerRow.append(noticia4);
 
-  container.append(containerRow);
-  return container;
+
+  return containerRow;
 }

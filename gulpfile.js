@@ -57,7 +57,7 @@ gulp.task('sass', ()=>{
 });
 
 gulp.task('js', ()=>{
-	gulp.src([config.source+sources.utils+"get-json.js",config.source+sources.components+"header.js",config.source+sources.components+"noticias.js", config.source+sources.js])
+	gulp.src([config.source+sources.utils+"get-json.js",config.source+sources.components+"header.js",config.source+sources.components+"noticias.js",config.source+sources.components+"mundo.js",config.source+sources.components+"noticia1.js", config.source+sources.js])
 	.pipe(concat('app.js'))
 	.pipe(browserify())
 	.pipe(gulp.dest(config.dist+paths.assets+"js"))
@@ -68,48 +68,10 @@ gulp.task('img', ()=>{
 	.pipe(gulp.dest(config.dist+paths.assets+"img"))
 });
 
-//
-// gulp.task('sass-watch',['sass'], (done)=>{
-// 	browserSync.reload();
-// 	done();
-// });
-//
-// gulp.task('js-watch',['js'], (done)=>{
-// 	browserSync.reload();
-// 	done();
-// });
-//
-// gulp.task('html-watch',['html'], (done)=>{
-// 	browserSync.reload();
-// 	done();
-// });
-//
-// gulp.task('img-watch',['img'], (done)=>{
-// 	browserSync.reload();
-// 	done();
-// });
-
 gulp.task('serve', ()=>{
 	browserSync.init({
 		server:{
 			baseDir: config.dist
 		}
 	});
-
-  // gulp.task('serve', ['nodemon'], ()=>{
-  // 	browserSync.init(null, {
-  // 		server:{
-  // 			baseDir: config.dist
-  // 		}
-  // 	});
-  // gulp.task('browser-sync', ['nodemon'], function() {
-  //     browserSync.init(null, {
-  //         proxy: "http://localhost:3700", // port of node server
-  //     });
-  // });
-  //
-	// gulp.watch(sources.html, ['html-watch']);
-	// gulp.watch(config.source+sources.sass, ['sass-watch']);
-	// gulp.watch(config.source+sources.js, ['js-watch']);
-	// gulp.watch(config.source+sources.img, ['img-watch']);
 });

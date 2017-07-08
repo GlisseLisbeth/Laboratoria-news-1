@@ -6,33 +6,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="assets/css/main.css" rel="stylesheet">
     </head>
     <body>
-      <!-- <nav class="header">
-        <div class="nav-wrapper">
-          <ul class="left hide-on-med-and-down">
-            <li><a href=""><img src="assets/img/menu.png"/>SECTIONS</a></li>
-            <li><a href=""><img src="assets/img/search.png"/>SEARCH</a></li>
-          </ul>
-          <ul class="right hide-on-med-and-down">
-            <li><a href=""><img src="assets/img/fb.png"/></a></li>
-            <li><a href="#"><img src="assets/img/tw.png"/></a></li>
-            <li><a href=""><img src="assets/img/in.png"/></a></li>
-          </ul>
-        </div>
-      </nav> -->
-      <!-- <nav class="nav-wrapper nav"> -->
+      <nav class="nav-wrapper nav">
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <div class="brand-logo center-align nav__logo">
-          <img  src="assets/img/logoicon.png" alt="">
+        <ul class="left hide-on-med-and-down hide-on-small-only">
+          <li><a href=""><img src="assets/img/menu.png" class="nav__icon"/>SECTIONS</a></li>
+          <li><a href=""><img src="assets/img/search.png" class="nav__icon"/>SEARCH</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down hide-on-small-only">
+          <li><a href=""><img src="assets/img/fb.png"/></a></li>
+          <li><a href="#"><img src="assets/img/tw.png"/></a></li>
+          <li><a href=""><img src="assets/img/in.png"/></a></li>
+        </ul>
+        <div class="brand-logo responsive-img center-align nav__logo">
+          <img  src="assets/img/logoicon.png" class="responsive-img" alt="">
         </div>
-        <ul class="center-align hide-on-med-and-down nav__menu">
+        <ul class="center-align hide-on-med-and-down nav__menu hide-on-small-only">
           <li><a href="">Lo último</a></li>
           <li><a href="#">Opinión</a></li>
           <li><a href="">Cultura</a></li>
           <li><a href="">Perú</a></li>
-          <li><a href="">Tecología</a></li>
+          <li><a href="">Tecnología</a></li>
           <li><a href="">Mundo</a></li>
           <li><a href="">Economía</a></li>
           <li><a href="">Lifestyle</a></li>
@@ -43,7 +40,7 @@
           <li><a href="#">Opinión</a></li>
           <li><a href="">Cultura</a></li>
           <li><a href="">Perú</a></li>
-          <li><a href="">Tecología</a></li>
+          <li><a href="">Tecnología</a></li>
           <li><a href="">Mundo</a></li>
           <li><a href="">Economía</a></li>
           <li><a href="">Lifestyle</a></li>
@@ -52,9 +49,40 @@
       </nav>
       <div class="root">
       </div>
+      <footer class="container footer">
+        <div class="row">
+          <div class="col s12 m4 footer__seccion1">
+            <div class="">
+              <img src="assets/img/logo-footer.png" alt="" class="responsive-img">
+            </div>
+            <div class="">
+              <p>© Editado por Laboratoria  Av. José Pardo #601 Lima 1 Perú Copyright © Laboratoria.la Todos los derechos reservados.</p>
+            </div>
+          </div>
+          <div class="col m4 hide-on-small-only">
+            <p>DIRECTOR GENERAL:</p>
+            <span>Francisco Miró Quesada Cantuarias </span>
+            <p>DIRECTOR PERIODÍSTICO:</p>
+            <span>Fernando Berckemeyer Olaechea </span>
+            <p>SUSCRIPCIONES:</p>
+            <span>suscriptores@comercio.com.pe </span>
+            <p>PUBLICIDAD ONLINE:</p>
+            <span>fonoavisos@comercio.com.pe </span>
+            <p>CLUB EL COMERCIO:</p>
+            <span>clubelcomercio@comercio.com.pe</span>
+            <span>Compromiso de Autorregulación Comercial</p></span>
+          </div>
+          <div class="col m4 hide-on-small-only">
+            <p>TÉRMINOS Y CONDICIONES DE USO</p>
+            <p>TRABAJA CON NOSOTROS</p>
+            <p>LIBRO DE RECLAMACIONES</p>
+            <p>SEDES PRINCIPALES</p>
+            <p>POLÍTICAS DE PRIVACIDAD</p>
+          </div>
+        </div>
+      </footer>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-        <!-- <script src="assets/js/utils/get-json.js"></script> -->
         <script src="assets/js/app.js"></script>
     </body>
 </html>

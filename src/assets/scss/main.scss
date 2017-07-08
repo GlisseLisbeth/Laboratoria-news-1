@@ -1,24 +1,50 @@
 @import "colors";
+@import "fonts";
 
+*{
+  font-family: 'Montserrat', sans-serif;
+}
 body{
   margin: 0;
   padding: 0;
 }
 nav ul a{
-  color: $color-principal;
+  color: $color-secundario;
+  margin-right: 5px;
+}
+h5{
+  font-size: $size-noticia-title;
+}
+.text-notas{
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.text-notas-min{
+  font-size: 0.9rem;
 }
 .nav-wrapper{
   background-color: transparent;
 }
-.header{
-  background-color: $color-base;
-  color: $color-principal;
+.hr-title{
+  width: 30px;
+  border: 3px solid $color-principal;
+  position: relative;
+  left: 0;
+  margin: 5px 0;
+}
+.line-title{
+
 }
 .nav{
+  margin: 0 auto;
   top: 0;
-  // background-color: $color-base;
+  &__icon{
+    padding-right: 10px;
+  }
   &__logo{
-    margin-top: 60px;
+    width: 100%;
+    margin-top: 70px;
+    text-align: center;
   }
   &__menu{
     background-color: $color-principal;
@@ -31,14 +57,57 @@ nav ul a{
     a{
       margin: 0 20px;
       font-size: 1.2rem;
-      letter-spacing: 1.6;
       color: $color-base;
+      font-weight: 500;
     }
   }
 }
 
+@media (max-width: 768px){
+  .nav{
+    .button-collapse i{
+      color: $color-principal;
+    }
+    &__logo{
+      margin-top: 0;
+      width: 250px;
+    }
+  }
+  .root{
+    top: 0px;
+  }
+  .noticia1__texto{
+    h4{
+      font-size: 1.5rem;
+    }
+  }
+  @for $i from 3 to 5{
+    .noticia#{$i}__bg{
+      height: 100px;
+      margin: 5px 0;
+    }
+  }
+}
 
-.seccion1{
+.root{
+  position: relative;
+  top: 150px;
+}
+
+@for $i from 1 to 8{
+  .noticia#{$i}__bg{
+    background-color: $color-secundario;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: $color-base;
+    &__texto{
+    }
+  }
+}
+
+.noticia1{
+  cursor: pointer;
   color: $color-base;
   position: relative;
   &__texto{
@@ -46,5 +115,19 @@ nav ul a{
     bottom: 0;
     left: 0;
   }
+}
 
+.noticia2__bg{
+  margin-top: 10px;
+}
+.noticia3__bg{
+  @extend .noticia2__bg;
+}
+
+.footer{
+  background-color: $color-principal;
+  color: $color-base;
+  position: relative;
+  top: 140px;
+  padding: 10px;
 }

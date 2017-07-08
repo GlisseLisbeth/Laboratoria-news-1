@@ -2,26 +2,34 @@
 
 const render = (root,data) => {
   root.empty();
-  const wrapper = $('<div class="wrapper"></div>');
-  // wrapper.append(Header(_ => render(root)));
+  const wrapper = $('<div class="wrapper container"></div>');
   wrapper.append(Header());
-  wrapper.append(Noticias(data));
+  
+  if (state.noticiaSelected != null) {
+    wrapper.append(NoticiaPrincipal());
+  } else{
+    wrapper.append(Noticias(_ => render(root),data));
+    wrapper.append(Mundo(_ => render(root),data));
+  }
+
   root.append(wrapper);
 }
 
 const state = {
-  noticia: null
+  noticiaSelected: null
 };
 
 
 $( _ => {
   getJSON('/api/news/', (err, json) => {
     if (err) { return alert(err.message);}
-    // state.stations = json;
+
+    var id = json[0];
+    console.log(id);
+
     const root = $('.root');
     render(root,json);
     console.log(json);
-    console.log(json[0]);
   });
   $(".button-collapse").sideNav();
 });
