@@ -8,35 +8,20 @@ body{
   margin: 0;
   padding: 0;
 }
+h5{
+  font-size: $size-noticia-title;
+}
+.root{
+  position: relative;
+  top: 150px;
+}
+//Menú de navegación
 nav ul a{
   color: $color-secundario;
   margin-right: 5px;
 }
-h5{
-  font-size: $size-noticia-title;
-}
-.text-notas{
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-.text-notas-min{
-  font-size: 0.9rem;
-}
 .nav-wrapper{
   background-color: transparent;
-}
-.hr-title{
-  width: 30px;
-  border: 3px solid $color-principal;
-  position: relative;
-  left: 0;
-  margin: 5px 0;
-}
-.line-title{
-
-}
-%footer-pd{
-  padding: 10px;
 }
 .nav{
   margin: 0 auto;
@@ -65,72 +50,25 @@ h5{
     }
   }
 }
-
-@media (max-width: 768px){
-  .nav{
-    .button-collapse i{
-      color: $color-principal;
-    }
-    &__logo{
-      margin-top: 0;
-      width: 250px;
-    }
-  }
-  .root{
-    top: 0px;
-  }
-  .noticia1__texto{
-    h4{
-      font-size: 1.5rem;
-    }
-  }
-  @for $i from 3 to 5{
-    .noticia#{$i}__bg{
-      height: 100px;
-      margin: 5px 0;
-    }
-  }
+//Noticia 1
+.text-notas{
+  font-size: 0.9rem;
+  font-weight: 700;
 }
-
-.root{
+.text-notas-min{
+  font-size: 0.9rem;
+}
+.hr-title{
+  width: 30px;
+  border: 3px solid $color-principal;
   position: relative;
-  top: 150px;
+  left: 0;
+  margin: 5px 0;
 }
 
-@for $i from 1 to 8{
-  .noticia#{$i}__bg{
-    background-color: $color-secundario;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    color: $color-base;
-    &__texto{
-    }
-  }
-}
-
-.noticia1-click{
-  cursor: pointer;
-  color: $color-base;
-  position: relative;
-  &__texto{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-}
-
-.noticia2__bg{
-  margin-top: 10px;
-}
-.noticia3__bg{
-  @extend .noticia2__bg;
-}
-
-.img-autor{
-  border-radius: 50%;
-  border: 1px solid $color-principal;
-  padding: 5px;
+//Footer
+%footer-pd{
+  padding: 10px;
 }
 
 .footer{
@@ -165,4 +103,65 @@ h5{
     right: 30px;
     display: inline-block;
   }
+}
+
+@media (max-width: 768px){
+  .nav{
+    .button-collapse i{
+      color: $color-principal;
+    }
+    &__logo{
+      margin-top: 0;
+      width: 250px;
+    }
+  }
+  .root{
+    top: 0px;
+  }
+  .noticia1__texto{
+    h4{
+      font-size: 1.5rem;
+    }
+  }
+  @for $i from 3 to 5{
+    .noticia#{$i}__bg{
+      height: 100px;
+      margin: 5px 0;
+    }
+  }
+}
+
+@for $i from 1 to 8{
+  .noticia#{$i}__bg{
+    background-color: $color-secundario;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: $color-base;
+    &__texto{
+    }
+  }
+}
+.noticia1-click{
+  cursor: pointer;
+  color: $color-base;
+  position: relative;
+  &__texto{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.noticia2__bg{
+  margin-top: 10px;
+}
+.noticia3__bg{
+  @extend .noticia2__bg;
+}
+
+.img-autor{
+  border-radius: 50%;
+  border: 1px solid $color-principal;
+  padding: 5px;
 }
