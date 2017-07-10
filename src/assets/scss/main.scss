@@ -106,17 +106,27 @@ nav span{
 
 @for $i from 1 to 8{
   .noticia#{$i}__bg{
-    background-color: $color-secundario;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    color: $color-base;
     margin-top: 10px;
-    height: 100px;
-    margin: 5px 0;
+    img{
+      height: 66vh;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
-  .noticia#{$i}__bg{
-    margin-top: 10px;
+  .noticia#{$i}__texto{
+    background-color: $color-secundario;
+    color: $color-base;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h5{
+      margin: 0;
+      font-size: $size-noticia-title;
+    }
   }
 }
 
