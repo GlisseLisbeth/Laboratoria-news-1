@@ -9,7 +9,7 @@ const NoticiaPrincipal = () =>{
   const line2 = $('<hr class= "line-title">');
   const textoNoticia = $('<div class="col s9"></div>');
 
-  const autor = $('<div class="col s12"><div class="col s2 "><img class="responsive-img img-autor" src="assets/img/'+state.noticiaSelected.author.picture+'"/></div></div>')
+  const autor = $('<div class="col s12"><div class="col s2 "><img class="responsive-img img-autor" src="assets/img/authors/'+state.noticiaSelected.author.picture+'"/></div></div>')
   const infoAutor = $('<div class="col s5"><p>'+state.noticiaSelected.author.name+'</p>'+
                       '<p>'+state.noticiaSelected.author.user+'</p></div>');
   const infoNoticia = $('<div class="col s12"><p>'+state.noticiaSelected.body+'</p></div>')

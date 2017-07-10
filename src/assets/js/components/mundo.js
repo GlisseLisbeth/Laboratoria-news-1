@@ -3,28 +3,28 @@ const Mundo = (update, data) =>{
   const title = $('<h5>MUNDO</h5>');
   const line = $('<hr class="hr-title">');
   const noticia1 = $('<div class="col s12 m3 noticia1"></div>');
-  const textNoticia1 = $('<div class="noticia1__bg"><img class="responsive-img" src="assets/img/'+data[4].img+'"/><div class="noticia2__texto"><h5>'+data[4].title+'</h5></div></div>')
+  const textNoticia1 = $('<div class="noticia1__bg"><img class="responsive-img" src="assets/img/news/'+data[4].img+'"/><div class="noticia2__texto"><h5>'+data[4].title+'</h5></div></div>')
   const noticia2 = $('<div class="col s12 m6 noticia2"></div>');
   const noticia2_1 = $('<div class="col s6"><div class="noticia2__bg">'+
-                        '<img class="responsive-img" src="assets/img/'+data[5].img+'"/>'+
+                        '<img class="responsive-img" src="assets/img/news/'+data[5].img+'"/>'+
                         '<div class="noticia3__texto"><h5>'+data[5].title+'</h5></div<div></div>');
   const noticia2_2 = $('<div class="col s6"><div class="noticia2__bg">'+
-                        '<img class="responsive-img" src="assets/img/'+data[6].img+'"/>'+
+                        '<img class="responsive-img" src="assets/img/news/'+data[6].img+'"/>'+
                         '<div class="noticia3__texto"><h5>'+data[6].title+'</h5></div<div></div>');
   const noticia2_3 = $('<div class="col s12"><div class="noticia2__bg">'+
-                        '<img class="responsive-img col s6" src="assets/img/'+data[8].img+'"/>'+
+                        '<img class="responsive-img col s6" src="assets/img/news/'+data[8].img+'"/>'+
                         '<div class="noticia3__texto col s6"><h5>'+data[8].title+'</h5></div<div></div>');
   const noticia2_4 = $('<div class="col s12"><div class="noticia2__bg">'+
-                        '<img class="responsive-img col s6" src="assets/img/'+data[9].img+'"/>'+
+                        '<img class="responsive-img col s6" src="assets/img/news/'+data[9].img+'"/>'+
                         '<div class="noticia3__texto col s6"><h5>'+data[9].title+'</h5></div<div></div>');
   const noticia3 = $('<div class="col s12 m3 noticia3 hide-on-small-only"></div>');
-  const textNoticia3 = $('<div class="noticia3__bg"><img class="responsive-img" src="assets/img/'+data[7].img+'"/><div class="noticia2__texto"><h5>'+data[7].title+'</h5></div></div>');
+  const textNoticia3 = $('<div class="noticia3__bg"><img class="responsive-img" src="assets/img/news/'+data[7].img+'"/><div class="noticia2__texto"><h5>'+data[7].title+'</h5></div></div>');
   const noticia4 = $('<div class="col s12 m4 noticia4"></div>');
-  const textNoticia4 = $('<div class="noticia4__bg"><img class="responsive-img" src="assets/img/'+data[10].img+'"/><div class="noticia2__texto"><h5>'+data[10].title+'</h5></div></div>');
+  const textNoticia4 = $('<div class="noticia4__bg"><img class="responsive-img" src="assets/img/news/'+data[10].img+'"/><div class="noticia2__texto"><h5>'+data[10].title+'</h5></div></div>');
   const noticia5 = $('<div class="col s12 m4 noticia5"></div>');
-  const textNoticia5 = $('<div class="noticia5__bg"><img class="responsive-img" src="assets/img/'+data[11].img+'"/><div class="noticia2__texto"><h5>'+data[11].title+'</h5></div></div>');
+  const textNoticia5 = $('<div class="noticia5__bg"><img class="responsive-img" src="assets/img/news/'+data[11].img+'"/><div class="noticia2__texto"><h5>'+data[11].title+'</h5></div></div>');
   const noticia6 = $('<div class="col s12 m4 noticia6"></div>');
-  const textNoticia6 = $('<div class="noticia6__bg"><img class="responsive-img" src="assets/img/'+data[12].img+'"/><div class="noticia2__texto"><h5>'+data[12].title+'</h5></div></div>');
+  const textNoticia6 = $('<div class="noticia6__bg"><img class="responsive-img" src="assets/img/news/'+data[12].img+'"/><div class="noticia2__texto"><h5>'+data[12].title+'</h5></div></div>');
   noticia1.append(textNoticia1);
   noticia2.append(noticia2_1);
   noticia2.append(noticia2_2);
