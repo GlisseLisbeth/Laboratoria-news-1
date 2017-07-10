@@ -26,9 +26,8 @@ _Proyecto Final | Sprint 6_
   - _**Educación**_
   - _**Opinión**_
   - _**Footer**_
-
   
- ## Requerimientos
+  2. **Requerimientos**
     - [x] Se tiene que replicar el diseño con las secciones.
     - [x] Debe de contar con las funcionalidades: carousel y  botón del footer.
     - [x] La página web tiene que ser responsive: desktop y mobile.
@@ -36,10 +35,10 @@ _Proyecto Final | Sprint 6_
     - [x] Tienes que hacer uso de componentes.
     - [x] Utilizar SASS para los estilos.
     - [x] Automatizar tus tareas (GULP).
-    
+  
 Mira cómo quedó haciendo click [aquí](colocar link aqui).
 
-## Team Joined Coders
+## Team Ya Tu Sass
 
 <a href="https://github.com/dianaVidalC"><img src="https://avatars3.githubusercontent.com/u/25887195?v=3&s=460" alt="Erika Vidal" height="150"></a> |
 <a href="https://github.com/ruthmerycardenas"><img src="https://avatars0.githubusercontent.com/u/25912796?v=3&s=460" alt="Mery Cardenas" height="150"></a>
