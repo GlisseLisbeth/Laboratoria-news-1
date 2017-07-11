@@ -111,7 +111,7 @@ nav span{
     }
   }
   .noticia2__texto{
-    height: $primary-height/2;
+    height: $primary-height - 5vh;
   }
   @for $i from 1 to 2{
     .noticia#{$i}__bg{
@@ -185,6 +185,16 @@ nav span{
     position: absolute;
     bottom: 0;
     left: 0;
+  }
+  & h5{
+    font-size: 2.64rem;
+    margin: .5rem 0.2rem 0.4rem 1.3rem;
+  }
+  & h6{
+    font-size: 1.2rem;
+    margin: .5rem 0.2rem 1.4rem 1.3rem;
+    width: 59%;
+
   }
 }
 
