@@ -1,5 +1,6 @@
 @import "colors";
 @import "fonts";
+@import "sizes";
 
 *{
   font-family: 'Montserrat', sans-serif;
@@ -27,13 +28,14 @@ nav span{
   width: 90%;
   box-shadow: none;
   border-bottom: 1px solid $color-secundario;
+  padding-bottom: 70px;
 }
 .hr-title{
   width: 30px;
   border: 3px solid $color-principal;
+  float: left;
   position: relative;
-  left: 0;
-  margin: 5px 0;
+  top: -8px;
 }
 .root {
   position: relative;
@@ -49,7 +51,6 @@ nav span{
 
 .nav{
   margin: 0 auto;
-  top: 0;
   &__icon{
     padding-right: 10px;
   }
@@ -73,30 +74,57 @@ nav span{
       font-weight: 500;
     }
   }
+  .button-collapse{
+    margin: 0 34px;
+  }
 }
 
 @media (max-width: 768px){
+  .root{
+    top: 0px;
+  }
   .nav{
+    margin-top: 20px;
+    margin-bottom: 30px;
     .button-collapse i{
       color: $color-principal;
     }
     &__logo{
       margin-top: 0;
       width: 250px;
+      min-height: 40px;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
   }
-  .root{
-    top: 0px;
+  .row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    .col{
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+    }
   }
   .noticia1__texto{
     h4{
       font-size: 1.5rem;
     }
   }
-  @for $i from 2 to 4{
+  .noticia2__texto{
+    height: $primary-height/2;
+  }
+  @for $i from 1 to 2{
     .noticia#{$i}__bg{
-      height: 100px;
-      margin: 5px 0;
+      height: $primary-height;
+    }
+  }
+  @for $i from 3 to 5{
+    .noticia#{$i}__bg{
+      height: $primary-height/2;
+    }
+    .noticia#{$i}__texto{
+      height: $primary-height/2;
+      margin-top: 10px;
     }
   }
 }
@@ -105,16 +133,25 @@ nav span{
   .container {
     width: 90%;
   }
+  @for $i from 3 through 4{
+    .noticia#{$i}__bg{
+      height: 292px;
+    }
+  }
 }
 
-@for $i from 1 to 8{
+@for $i from 2 to 8{
+  .noticia#{$i}{
+    padding-left: 0 !important;
+  }
   .noticia#{$i}__bg{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 10px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     img{
-      height: 66vh;
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
@@ -126,12 +163,16 @@ nav span{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 30vh;
+    height: $primary-height/2;
     h5{
       margin: 0;
       font-size: $size-noticia-title;
     }
   }
+}
+
+.noticia4{
+  padding-right: 0 !important;
 }
 
 .noticia1-click{

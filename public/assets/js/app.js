@@ -37,9 +37,30 @@ $( _ => {
   })
 });
 
+'use strict';
+
+
+const getJSON = (url, cb) => {
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.addEventListener('load', () => {
+
+    if (xhr.status !== 200) {
+      return cb(new Error('Error loading JSON from ' + url + '(' + xhr.status + ')'));
+    }
+
+    cb(null, xhr.response);
+  });
+
+  xhr.open('GET', url);
+  xhr.responseType = 'json';
+  xhr.send();
+};
+
 
 const Mundo = (update, data) =>{
-  const containerRow = $('<div class="row"></div>');
+  const containerRow = $('<div class="row" id="mundo"></div>');
   const title = $('<h5>MUNDO</h5>');
   const line = $('<hr class="hr-title">');
   const noticia1 = $('<div class="col s12 m3 noticia1"></div>');
@@ -48,7 +69,7 @@ const Mundo = (update, data) =>{
   const noticia2_1 = $('<div class="col s6"><div class="noticia2__bg">'+
                         '<img class="responsive-img" src="assets/img/'+data[5].img+'"/>'+
                         '<div class="noticia3__texto"><h5>'+data[5].title+'</h5></div<div></div>');
-  const noticia2_2 = $('<div class="col s6"><div class="noticia2__bg">'+
+  const noticia2_2 = $('<div class="col s6 hide-on-med-and-down hide-on-small-only"><div class="noticia2__bg">'+
                         '<img class="responsive-img" src="assets/img/'+data[6].img+'"/>'+
                         '<div class="noticia3__texto"><h5>'+data[6].title+'</h5></div<div></div>');
   const noticia2_3 = $('<div class="col s12"><div class="noticia2__bg">'+
@@ -150,14 +171,16 @@ const NoticiaPrincipal = () =>{
 const Noticias = (update,data) =>{
 
   const containerRow = $('<div class="row"></div>');
-  const noticia1 = $('<div class="col s12 noticia1-click"></div>');
-  const textNoticia1 = $('<img class="responsive-img" src="assets/img/'+data[0].img+'"/><div class="noticia1-click__texto col s10"><h5>'+data[0].title+'</h5><h6>'+data[0].brief+'</h6></div>');
+  const title = $('<h5 class="hide-on-med-and-up">LO ÚLTIMO</h5>');
+  const line = $('<hr class="hr-title hide-on-med-and-up">');
+  const noticia1 = $('<div class="col s12 noticia1-click noticia1__bg"></div>');
+  const textNoticia1 = $('<img src="assets/img/'+data[0].img+'"/><div class="noticia1-click__texto col s10"><h5>'+data[0].title+'</h5><h6 class="hide-on-med-and-down">'+data[0].brief+'</h6></div>');
   const noticia2 = $('<div class="col s12 m6 noticia2"></div>');
-  const textNoticia2 = $('<div class="noticia2__bg"><img class="responsive-img" src="assets/img/'+data[1].img+'"/></div><div class="noticia2__texto"><h5>'+data[1].title+'</h5></div></div>')
+  const textNoticia2 = $('<div class="noticia2__bg"><img class="" src="assets/img/'+data[1].img+'"/></div><div class="noticia2__texto"><h5>'+data[1].title+'</h5></div></div>')
   const noticia3 = $('<div class="col s12 m3 noticia3"></div>');
-  const textNoticia3 = $('<div class="noticia3__bg"><img class="responsive-img col s6 m12" src="assets/img/'+data[2].img+'"/></div><div class="noticia3__texto col s6 m12"><h5>'+data[2].title+'</h5></div></div>')
+  const textNoticia3 = $('<div class="noticia3__bg col s6 m12"><img class="responsive-img" src="assets/img/'+data[2].img+'"/></div><div class="noticia3__texto col s6 m12"><h5>'+data[2].title+'</h5></div></div>')
   const noticia4 = $('<div class="col s12 m3 noticia4"></div>');
-  const textNoticia4 = $('<div class="noticia4__bg"><img class="responsive-img col s6 m12" src="assets/img/'+data[3].img+'"/></div><div class="noticia4__texto col s6 m12"><h5>'+data[3].title+'</h5></div></div>');
+  const textNoticia4 = $('<div class="noticia4__bg col s6 m12"><img class="responsive-img" src="assets/img/'+data[3].img+'"/></div><div class="noticia4__texto col s6 m12"><h5>'+data[3].title+'</h5></div></div>');
   const menu = $('<ul class="center-align nav__menu hide-on-small-only"><li><a href="">Lo último</a></li><li><a href="#">Opinión</a></li><li><a href="">Cultura</a></li><li><a href="">Perú</a></li><li><a href="">Tecnología</a></li><li><a href="">Mundo</a></li><li><a href="">Economía</a></li><li><a href="">Lifestyle</a></li><li><a href="">Deporte</a></li></ul>');
 
   noticia1.on('click', ()=>{
@@ -171,6 +194,8 @@ const Noticias = (update,data) =>{
   noticia4.append(textNoticia4);
 
   containerRow.append(menu);
+  containerRow.append(title);
+  containerRow.append(line);
   containerRow.append(noticia1);
   containerRow.append(noticia2);
   containerRow.append(noticia3);
@@ -183,26 +208,5 @@ const Noticias = (update,data) =>{
 //   const containerRow = $('<div class="row"></div>');
 //
 // }
-
-'use strict';
-
-
-const getJSON = (url, cb) => {
-
-  const xhr = new XMLHttpRequest();
-
-  xhr.addEventListener('load', () => {
-
-    if (xhr.status !== 200) {
-      return cb(new Error('Error loading JSON from ' + url + '(' + xhr.status + ')'));
-    }
-
-    cb(null, xhr.response);
-  });
-
-  xhr.open('GET', url);
-  xhr.responseType = 'json';
-  xhr.send();
-};
 
 },{}]},{},[1])

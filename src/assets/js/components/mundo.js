@@ -1,5 +1,5 @@
 const Mundo = (update, data) =>{
-  const containerRow = $('<div class="row"></div>');
+  const containerRow = $('<div class="row" id="mundo"></div>');
   const title = $('<h5>MUNDO</h5>');
   const line = $('<hr class="hr-title">');
   const noticia1 = $('<div class="col s12 m3 noticia1"></div>');
@@ -8,7 +8,7 @@ const Mundo = (update, data) =>{
   const noticia2_1 = $('<div class="col s6"><div class="noticia2__bg">'+
                         '<img class="responsive-img" src="assets/img/'+data[5].img+'"/>'+
                         '<div class="noticia3__texto"><h5>'+data[5].title+'</h5></div<div></div>');
-  const noticia2_2 = $('<div class="col s6"><div class="noticia2__bg">'+
+  const noticia2_2 = $('<div class="col s6 hide-on-med-and-down hide-on-small-only"><div class="noticia2__bg">'+
                         '<img class="responsive-img" src="assets/img/'+data[6].img+'"/>'+
                         '<div class="noticia3__texto"><h5>'+data[6].title+'</h5></div<div></div>');
   const noticia2_3 = $('<div class="col s12"><div class="noticia2__bg">'+
